@@ -1,0 +1,23 @@
+# spring application name should be the service name
+# to be registered in the eureka discovery server
+spring:
+  application:
+     name: biller-service
+# configuration fro spring cloud config server
+  cloud:
+    config:
+     uri: http://localhost:8888
+# disable management security for actuator
+management:
+  security:
+    enabled: false    
+# configuration for eureka discovery client
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: ${EUREKA_URI:http://localhost:1111/eureka}
+  instance:
+    preferIpAddress: true
+# other configuration
+server:
+  port: 9001
