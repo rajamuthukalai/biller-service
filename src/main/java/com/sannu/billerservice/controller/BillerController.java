@@ -24,7 +24,7 @@ import com.sannu.billerservice.model.CustomError;
 import com.sannu.billerservice.service.BillerService;
 
 @RestController
-@RequestMapping(path = "/api")
+@RequestMapping(path = "/api/b")
 @CrossOrigin("*")
 public class BillerController {
 
